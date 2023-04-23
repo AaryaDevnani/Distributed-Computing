@@ -12,15 +12,15 @@ for i in range(c+1,n):
     if active[i] == True:
         ok.append(i)
         print(f"Okay message from {i}")
-print("New Elections Start")
 c = ok[0]
 for i in range(0,len(ok)):
+    print("New Elections Start")
     e = ok[i]
-    for j in range(e,n-1):
-        print(f"Election message sent from {e} to {j+1}")
-        if active[j+1] == True:
-            c = j+1
-            print(f"Okay message from {j+1}") 
+    for j in range(e+1,n):
+        print(f"Election message sent from {e} to {j}")
+        if active[j] == True:
+            c = j
+            print(f"Okay message from {j}") 
 print(f"Final cooradinator is {c}")
 for i in range(0,n):
     if(i != c and i < c):

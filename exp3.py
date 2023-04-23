@@ -13,11 +13,12 @@ def timeToSeconds(time):
 
 agreedTimeSeconds = timeToSeconds(agreedTime)
 machineTimesSeconds = []
-
 newSkew = []
+skew = []
+
 for i in machineTimes:
     machineTimesSeconds.append(timeToSeconds(i))
-skew = []
+    
 for i in machineTimesSeconds:
     skewTime = i - agreedTimeSeconds
     skewInMin = int(skewTime/60)
